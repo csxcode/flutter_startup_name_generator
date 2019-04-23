@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/foundation.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class RandomWordsState extends State<RandomWords> {
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
         itemBuilder: /*1*/ (context, i) {
+          debugPrint('i: $i');
           if (i.isOdd) return Divider(); /*2*/
 
           final index = i ~/ 2; /*3*/
